@@ -1,0 +1,134 @@
+<div class="card-header bg-danger text-white">
+  <h4>Register Form</h4>
+</div>
+
+
+  <div class="card card-body">
+    <div class="col-md-5 mx-auto">
+      <div class="card mb-0">
+
+    <!-- Content area -->
+
+      <!-- Registration form -->
+      <form (ngSubmit)="onSubmit()" [formGroup]="registerForm" action="index.html" class="flex-fill">
+
+            <div class="card mb-0">
+              <div class="card-body">
+                <div class="text-center mb-3">
+                  <i class="icon-plus3 icon-2x text-success border-success border-3 rounded-round p-3 mb-3 mt-1"></i>
+                  <h5 class="mb-0">{{"CREATE_ACCOUNT"}}</h5>
+                </div>
+
+                <div class="form-group form-group-feedback form-group-feedback-right">
+                  <input type="text" class="form-control" placeholder="Choose username">
+                  <div class="form-control-feedback">
+                    <i class="icon-user-plus text-muted"></i>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group form-group-feedback form-group-feedback-right">
+                      <input type="text" class="form-control" placeholder="First name">
+                      <div class="form-control-feedback">
+                        <i class="icon-user-check text-muted"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group form-group-feedback form-group-feedback-right">
+                      <input type="text" class="form-control" placeholder="Second name">
+                      <div class="form-control-feedback">
+                        <i class="icon-user-check text-muted"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group form-group-feedback form-group-feedback-right">
+                      <input type="password" class="form-control" placeholder="Create password">
+                      <div class="form-control-feedback">
+                        <i class="icon-user-lock text-muted"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group form-group-feedback form-group-feedback-right">
+                      <input type="password" class="form-control" placeholder="Repeat password">
+                      <div class="form-control-feedback">
+                        <i class="icon-user-lock text-muted"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group form-group-feedback form-group-feedback-right">
+                      <input type="email" class="form-control" placeholder="Your email">
+                      <div class="form-control-feedback">
+                        <i class="icon-mention text-muted"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group form-group-feedback form-group-feedback-right">
+                      <input type="email" class="form-control" placeholder="Repeat email">
+                      <div class="form-control-feedback">
+                        <i class="icon-mention text-muted"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <div class="uniform-checker">
+                        <span class="checked"><input checked="" class="form-input-styled" data-fouc="" type="checkbox"></span>
+                      </div>
+                      {{"REGISTER.SEND_ME"}} <a href="#">{{"REGISTER.TEST_SETTINGS"}}</a>
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <div class="uniform-checker">
+                        <span class="checked"><input checked="" class="form-input-styled" data-fouc="" type="checkbox">
+                      </span>
+                      </div>
+                      {{"REGISTER.SUBSCRIBE"}}
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <div class="uniform-checker"><span><input type="checkbox" class="form-input-styled" data-fouc=""></span>
+                      </div>
+                      {{"REGISTER.ACCEPT"}} <a href="#">{{"REGISTER.TERMS"}}</a>
+                    </label>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn bg-teal-400 btn-labeled btn-labeled-right"><b><i
+                  class="icon-plus3"></i></b> {{"REGISTER.CONFIRM"}}
+                </button>
+              </div>
+            </div>
+
+
+      </form>
+      <!-- /registration form -->
+
+    </div>
+    <!-- /content area -->
+
+
+
+    </div>
+</div>

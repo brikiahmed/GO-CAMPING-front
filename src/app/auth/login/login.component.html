@@ -1,0 +1,84 @@
+<div class="card-header bg-danger text-white">
+  <h4>Login Form</h4>
+</div>
+
+
+
+  <!-- Main content -->
+<div class="card card-body">
+  <div class="col-md-5 mx-auto">
+    <div class="card mb-0">
+
+
+      <!-- Login form -->
+      <form (ngSubmit)="onSubmit()" [formGroup]="loginForm" action="index.html" class="login-form">
+        <div class="card mb-0">
+          <div class="card-body">
+            <div class="text-center mb-3">
+              <span class="d-block text-muted">{{ "Enter User Name"}}</span>
+            </div>
+
+            <div class="form-group form-group-feedback form-group-feedback-left">
+              <input [ngClass]="{ 'is-invalid':
+              (loginForm.controls.email.dirty || loginForm.controls.email.touched)
+              && loginForm.controls.email.invalid && submitted } " class="form-control"
+                     formControlName="email" placeholder="email" type="text">
+
+              <div *ngIf="loginForm.controls.email.invalid && submitted"  class="invalid-feedback">
+                <div *ngIf="loginForm.controls.email.dirty || loginForm.controls.email.value === ''  " class="alert alert-danger mt-3 mb-0">
+                  <i class="icon-close2"></i>{{"EMAIL_FORMAT_REQUIRED"}}
+                </div>
+
+                <div *ngIf=" loginForm.controls.email.value === ''" class="alert alert-danger mt-3 mb-0">
+                  <i class="icon-close2"></i>{{"FIELD_REQUIRED"}}
+                </div>
+
+              </div>
+              <div class="form-control-feedback">
+                <i class="icon-user text-muted"></i>
+              </div>
+            </div>
+
+            <div class="form-group form-group-feedback form-group-feedback-left">
+              <div class="text-center mb-3">
+                <span class="d-block text-muted">{{ "Enter Password"}}</span>
+              </div>
+              <input [ngClass]="{ 'is-invalid':(loginForm.controls.password.dirty || loginForm.controls.password.touched)
+              && loginForm.controls.password.invalid && submitted  }" class="form-control"
+                     formControlName="password" placeholder="Password" type="password">
+              <div *ngIf="loginForm.controls.password.invalid" class="invalid-feedback">
+
+
+                <div *ngIf=" loginForm.controls.password.value === ''" class="alert alert-danger mt-3 mb-0">
+                  <i class="icon-close2"></i>{{"FIELD_REQUIRED"}}
+                </div>
+
+              </div>
+              <div class="form-control-feedback">
+                <i class="icon-lock2 text-muted"></i>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <button [disabled]="!loginForm.controls.email.dirty || !loginForm.controls.password.dirty" class="btn btn-primary btn-block"
+                      type="submit">{{"SIGN_IN"}} <i
+                class="icon-circle-right2 ml-2"></i></button>
+              <div *ngIf="errorFound" class="alert alert-danger mt-3 mb-0"><i class="icon-close2"></i>{{error}}</div>
+            </div>
+
+            <div class="text-center">
+              <a routerLink="/forget-password">{{"LOGIN.FORGOT_PASSWORD"}}</a>
+            </div>
+          </div>
+        </div>
+      </form>
+      <!-- /login form -->
+
+    </div>
+    <!-- /content area -->
+
+
+
+  <!-- /main content -->
+
+
